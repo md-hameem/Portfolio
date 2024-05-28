@@ -72,7 +72,7 @@ export const Uses = () => {
                   </ListItem>
                 </List>
                 <p>
-                  Contact: Mr. Dayo - <a href="mailto:dayo@luday.se">dayo@luday.se</a>
+                  Contact: Mr. Dayo(CTO) - <a href="mailto:dayo@luday.se">dayo@luday.se</a>
                 </p>
               </ProjectSectionText>
 
@@ -211,6 +211,23 @@ export const Uses = () => {
                     features like Live Share to enhance team productivity.
                   </ListItem>
                 </List>
+                <p>
+                  <strong>
+                    <em>Soft Skills:</em>
+                  </strong>
+                </p>
+                <List>
+                  <ListItem>
+                  Strong problem-solving abilities and a keen attention to detail.
+                  </ListItem>
+                  <ListItem>
+                  Effective teamwork and collaboration skills, fostering a productive and positive work environment.
+                  </ListItem>
+                  <ListItem>
+                  Adaptability and continuous learning to stay updated with the latest technological advancements.
+                  </ListItem>
+                </List>
+                <p>My skill set reflects a balance between front-end and back-end development, machine learning expertise, and a commitment to delivering high-quality software solutions.</p>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
