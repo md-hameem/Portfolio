@@ -23,12 +23,11 @@ const ProfileText = ({ visible, titleId }) => (
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I’m Hamim, currently I live in Zhengzhou studying as a Software Engineer at{' '}
       <Link href="https://www.zzu.edu.cn">Zhengzhou University</Link>. My projects include Web App Development, ML and DL. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
+      prototype and validate experiences. If you’re interested in me and the tech, programming language I
       use check out my <Link href="/uses">uses page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to ride bike, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
+      In my spare time I like to ride bike and play video games. I’m always down for hearing
       about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>
