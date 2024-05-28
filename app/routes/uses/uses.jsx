@@ -239,6 +239,71 @@ export const Uses = () => {
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
+
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow width="m">
+              <ProjectSectionHeading>Achivements</ProjectSectionHeading>
+              <ProjectSectionText as="div">
+                <p>
+                  <strong>
+                    <em>Academic Excellence:</em>
+                  </strong>
+                </p>
+                <List>
+                  <ListItem>
+                    <strong>Top Performer in Software Engineering Cohort</strong>:
+                    Consistently achieved high grades and recognition for outstanding
+                    performance in key subjects including Object-Oriented Programming (C++
+                    and Python), Java, Compilers, Algorithms, Operating Systems, Data
+                    Structures, Artificial Intelligence, Machine Learning, and Deep
+                    Learning.
+                  </ListItem>
+                </List>
+                <p>
+                  <strong>
+                    <em>Certifications:</em>
+                  </strong>
+                </p>
+                <List>
+                  <ListItem>
+                    <strong>JavaScript Advanced, Tuition Bear (10/2022 - 12/2022)</strong>
+                    : <br />
+                    Advanced proficiency in JavaScript, enhancing skills in front-end
+                    development and dynamic web applications.
+                  </ListItem>
+                  <ListItem>
+                    <strong>
+                      Data Analytics Professional, Google INC. (03/2024 - 04/2024)
+                    </strong>
+                    : <br />
+                    Comprehensive training in data analytics, equipping with skills to
+                    analyze and interpret complex datasets.
+                  </ListItem>
+                  <ListItem>
+                    <strong>
+                      Supervised Machine Learning: Regression and Classification,
+                      Deeplearning.ai (04/2024 - 05/2024)
+                    </strong>
+                    : <br />
+                    Advanced understanding of supervised machine learning techniques, with
+                    practical experience in regression and classification models.
+                  </ListItem>
+                </List>
+                <p>
+                  Languages I am a native or bilingual speaker of Bangla, ensuring
+                  seamless communication and cultural understanding in my native language.
+                  I possess full professional proficiency in English, enabling me to
+                  effectively communicate and collaborate in diverse professional
+                  settings. Additionally, I have professional studying proficiency in
+                  Chinese, which allows me to engage and work efficiently in environments
+                  where English & Chinese is the primary language.
+                </p>
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
