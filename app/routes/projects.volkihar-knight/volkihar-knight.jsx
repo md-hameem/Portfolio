@@ -1,28 +1,13 @@
 import volkiharBackgroundLarge from '~/assets/volkihar-background-large.jpg';
 import volkiharBackgroundPlaceholder from '~/assets/volkihar-background-placeholder.jpg';
-import volkiharBackground from '~/assets/volkihar-background.jpg';
 import volkiharBannerLarge from '~/assets/volkihar-banner-large.jpg';
 import volkiharBannerPlaceholder from '~/assets/volkihar-banner-placeholder.jpg';
-import volkiharBanner from '~/assets/volkihar-banner.jpg';
-import volkiharBookLarge from '~/assets/volkihar-book-large.png';
-import volkiharBookPlaceholder from '~/assets/volkihar-book-placeholder.png';
-import volkiharBook from '~/assets/volkihar-book.png';
 import volkiharEnderalLarge from '~/assets/volkihar-enderal-large.jpg';
-import volkiharEnderalLogoLarge from '~/assets/volkihar-enderal-logo-large.png';
-import volkiharEnderalLogoPlaceholder from '~/assets/volkihar-enderal-logo-placeholder.png';
-import volkiharEnderalLogo from '~/assets/volkihar-enderal-logo.png';
 import volkiharEnderalPlaceholder from '~/assets/volkihar-enderal-placeholder.jpg';
-import volkiharEnderal from '~/assets/volkihar-enderal.jpg';
-import volkiharSlide1Large from '~/assets/volkihar-slide-1-large.jpg';
-import volkiharSlide1 from '~/assets/volkihar-slide-1.jpg';
-import volkiharSlide2Large from '~/assets/volkihar-slide-2-large.jpg';
-import volkiharSlide2 from '~/assets/volkihar-slide-2.jpg';
-import volkiharSlide3Large from '~/assets/volkihar-slide-3-large.jpg';
-import volkiharSlide3 from '~/assets/volkihar-slide-3.jpg';
-import volkiharSlidePlaceholder from '~/assets/volkihar-slide-placeholder.jpg';
-import { Button } from '~/components/button';
+import detectAdblock from '~/assets/detect-adblock.jpg';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
+import { List, ListItem } from '~/components/list';
 import {
   ProjectBackground,
   ProjectContainer,
@@ -35,22 +20,16 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from '~/layouts/project';
-import { Fragment, Suspense, lazy } from 'react';
+import { Fragment} from 'react';
 import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
-import { VolkiharLogo } from './volkihar-logo';
 import styles from './volkihar-knight.module.css';
 
-const Carousel = lazy(() =>
-  import('~/components/carousel').then(module => ({ default: module.Carousel }))
-);
 
-const Armor = lazy(() => import('./armor').then(module => ({ default: module.Armor })));
-
-const title = 'Volkihar Knight';
+const title = 'AdBlock Detector';
 const description =
-  'A lore-friendly armor mod for The Elder Scrolls V: Skyrim. Released on PC and Xbox One with over one million downloads across both platforms.';
-const roles = ['3D Modelling', 'Texturing', 'Graphic Design'];
+  'The AdBlock Detector is a sophisticated JavaScript utility I developed to identify the presence of ad blockers on web pages. This tool is essential for websites relying on ad revenue, providing them with the ability to detect and respond to ad blocker usage.';
+const roles = ['JavaScript', 'AJAX', 'HTML & CSS'];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -75,7 +54,7 @@ export function VolkiharKnight() {
       />
       <ProjectContainer>
         <ProjectBackground
-          srcSet={`${volkiharBackground} 1280w, ${volkiharBackgroundLarge} 1920w`}
+          srcSet={`${volkiharBackgroundLarge} 1920w`}
           width={1280}
           height={720}
           placeholder={volkiharBackgroundPlaceholder}
@@ -84,143 +63,102 @@ export function VolkiharKnight() {
         <ProjectHeader
           title={title}
           description={description}
-          linkLabel="Get the mod"
-          url="https://www.nexusmods.com/skyrimspecialedition/mods/4806/"
+          linkLabel="View Repository"
+          url="https://github.com/md-hameem/AdBlocker-Detector/blob/main/adBlockDetector.js"
           roles={roles}
         />
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${volkiharBanner} 800w, ${volkiharBannerLarge} 1100w`}
+              srcSet={`${volkiharBannerLarge} 1100w`}
               width={800}
               height={436}
               placeholder={volkiharBannerPlaceholder}
-              alt="A dark elf wearing the Volkihar Knight armor with the logo overlaid on the image."
+              alt="AdBlock detector no more"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
-          <ProjectSectionContent>
-            <Image
-              srcSet={`${volkiharBook} 490w, ${volkiharBookLarge} 960w`}
-              width={480}
-              height={300}
-              placeholder={volkiharBookPlaceholder}
-              alt="A book containing a sketch depicting the logo and armor"
-              sizes={`(max-width: ${media.mobile}px) 90vw, (max-width: ${media.tablet}px) 80vw, 70vw`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
           <ProjectSectionColumns>
-            <div className={styles.armor}>
-              <Suspense>
-                <Armor alt="3D model of the Volkihar Knight armor" />
-              </Suspense>
-            </div>
+            <ProjectImage
+              srcSet={`${detectAdblock} 1100w`}
+              width={800}
+              height={436}
+              placeholder={volkiharBannerPlaceholder}
+              alt="AdBlock detector no more"
+              sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
+            />
+
             <div className={styles.textSection}>
-              <ProjectSectionHeading>Armor design</ProjectSectionHeading>
+              <ProjectSectionHeading>Implementation</ProjectSectionHeading>
               <ProjectSectionText>
-                As a player I noticed there weren’t any heavy armor options for the
-                Volkihar faction. This kinda sucks when you’ve specialised in heavy armor
-                and decide to join the faction and discover they all wear light armor.
+                Integrating the AdBlock Detector into a website is straightforward. By
+                configuring options such as detection delay, maximum attempts, and
+                callback functions, developers can tailor the detector to their specific
+                needs. This utility not only enhances user experience by identifying ad
+                blocker usage but also helps in strategizing responses to ensure ad
+                revenue is not adversely affected.
               </ProjectSectionText>
               <ProjectSectionText>
-                My solution was to create a mod that combines meshes from the Volkihar
-                faction armor with heavy plate armor. The mod builds upon textures and
-                meshes from the base game, so it unifies with Skyrim’s overall aesthetic.
-                I combined and modified the meshes in 3DS Max. To establish a cohesive
-                design across the set, I edited existing textures, and designed custom
-                textures in Photoshop.
+                Including the AdBlock Detector in my portfolio demonstrates my ability to
+                solve practical problems using JavaScript. It showcases my skills in web
+                development, AJAX, and client-side scripting, highlighting my capability
+                to create tools that enhance website functionality and revenue assurance.
               </ProjectSectionText>
             </div>
           </ProjectSectionColumns>
         </ProjectSection>
         <ProjectSection>
           <ProjectSectionContent>
-            <div className={styles.logoContainer}>
-              <VolkiharLogo
-                role="img"
-                aria-label="The Volkihar Knight logo, a monogram using the letters 'V' and 'K"
-              />
-            </div>
             <ProjectTextRow center noMargin>
-              <ProjectSectionHeading>Identity design</ProjectSectionHeading>
+              <ProjectSectionHeading>How It Works</ProjectSectionHeading>
               <ProjectSectionText>
-                The monogram uses custom designed typography to get the right balance of
-                weight and angularity. I combined this with Trajan for the text, which is
-                also used for Skyrim’s game title wordmark.
+                The AdBlock Detector works by injecting a bait element into the webpage.
+                Ad blockers typically hide or remove these bait elements, and the script
+                detects these changes to determine the presence of an ad blocker.
+                Additionally, it can fetch remote blocklists to enhance detection
+                accuracy. The detection results can be handled using custom callback
+                functions, making it easy to integrate with any website’s workflow.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <Suspense>
-              <Carousel
-                placeholder={volkiharSlidePlaceholder}
-                images={[
-                  {
-                    srcSet: `${volkiharSlide1} 960w, ${volkiharSlide1Large} 1920w`,
-                    sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                    alt: 'A female character wearing the black coloured armor set.',
-                  },
-                  {
-                    srcSet: `${volkiharSlide2} 960w, ${volkiharSlide2Large} 1920w`,
-                    sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                    alt: 'A close up of the custom gauntlets design.',
-                  },
-                  {
-                    srcSet: `${volkiharSlide3} 960w, ${volkiharSlide3Large} 1920w`,
-                    sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                    alt: 'A female character wielding a sword and wearing the red coloured armor.',
-                  },
-                ]}
-                width={1920}
-                height={1080}
-              />
-            </Suspense>
-          </ProjectSectionContent>
-        </ProjectSection>
+       
         <ProjectSection
           backgroundElement={
             <Image
-              srcSet={`${volkiharEnderal} 1280w, ${volkiharEnderalLarge} 1920w`}
+              srcSet={`${volkiharEnderalLarge} 1920w`}
               width={1280}
               height={720}
               placeholder={volkiharEnderalPlaceholder}
-              alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
+              alt="k"
               sizes={`100vw`}
             />
           }
         >
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
-              <Image
-                srcSet={`${volkiharEnderalLogo} 180w, ${volkiharEnderalLogoLarge} 360w`}
-                width={180}
-                height={200}
-                placeholder={volkiharEnderalLogoPlaceholder}
-                alt="The Enderal game logo"
-                sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 220px`}
-                style={{ maxWidth: 220, width: '100%', marginBottom: 30 }}
-              />
-              <ProjectSectionHeading>Featured in Enderal</ProjectSectionHeading>
+              <ProjectSectionHeading>Key Features</ProjectSectionHeading>
               <ProjectSectionText>
-                I was super stoked to have my work featured in the major standalone mod
-                Enderal, which won best fan creation at the game awards in 2016. Within
-                the game my armor design can be found being used for the Wandering Mage
-                armor set.
+                <List>
+                  <ListItem>
+                  <strong>Bait Element Detection:</strong> Utilizes invisible bait elements to detect ad blockers.
+                  </ListItem>
+                  <ListItem>
+                  <strong>Remote Blocklist Checks: </strong> Supports fetching and evaluating remote blocklists via AJAX.
+                  </ListItem>
+                  <ListItem>
+                  <strong>Customizable Callbacks: </strong> Provides flexibility through customizable callbacks for detection results.
+                  </ListItem>
+                  <ListItem>
+                  <strong>Configurable Parameters: </strong> Allows configuration of detection parameters such as delay between checks and maximum attempts.
+                  </ListItem>
+                  <ListItem>
+                  <strong>BDebug Mode: </strong> Includes a debug mode for detailed logging, aiding in troubleshooting and development.
+                  </ListItem>
+                </List>
               </ProjectSectionText>
-              <Button
-                secondary
-                iconHoverShift
-                icon="chevron-right"
-                href="https://store.steampowered.com/app/933480/Enderal_Forgotten_Stories/"
-              >
-                View on Steam
-              </Button>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>

@@ -127,7 +127,7 @@ export const Home = () => {
         title="AdBlock Detector"
         description="Block the adblocker detector to detect if there is any."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="/projects/volkihar-knight"
         model={{
           type: 'phone',
           alt: 'App login screen',
