@@ -10,7 +10,6 @@ import imageSprComponentsDark from '~/assets/spr-components-dark.png';
 import imageSprComponentsLightLarge from '~/assets/spr-components-light-large.png';
 import imageSprComponentsLightPlaceholder from '~/assets/spr-components-light-placeholder.png';
 import imageSprComponentsLight from '~/assets/spr-components-light.png';
-import imageSprDesignSystemDarkLarge from '~/assets/spr-design-system-dark-large.png';
 import imageSprDesignSystemDarkPlaceholder from '~/assets/spr-design-system-dark-placeholder.png';
 import imageSprDesignSystemDark from '~/assets/spr-design-system-dark.png';
 import imageSprDesignSystemLightLarge from '~/assets/spr-design-system-light-large.png';
@@ -25,29 +24,17 @@ import imageSprLessonBuilderLight from '~/assets/spr-lesson-builder-light.jpg';
 import videoSprMotionLarge from '~/assets/spr-motion-large.mp4';
 import videoSprMotionPlaceholder from '~/assets/spr-motion-placeholder.jpg';
 import videoSprMotion from '~/assets/spr-motion.mp4';
-import imageSprSchema1DarkLarge from '~/assets/spr-schema-1-dark-large.png';
-import imageSprSchema1DarkPlaceholder from '~/assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema1Dark from '~/assets/spr-schema-1-dark.png';
-import imageSprSchema1LightLarge from '~/assets/spr-schema-1-light-large.png';
-import imageSprSchema1LightPlaceholder from '~/assets/spr-schema-1-light-placeholder.png';
-import imageSprSchema1Light from '~/assets/spr-schema-1-light.png';
-import imageSprSchema2DarkLarge from '~/assets/spr-schema-2-dark-large.png';
-import imageSprSchema2DarkPlaceholder from '~/assets/spr-schema-2-dark-placeholder.png';
-import imageSprSchema2Dark from '~/assets/spr-schema-2-dark.png';
-import imageSprSchema2LightLarge from '~/assets/spr-schema-2-light-large.png';
-import imageSprSchema2LightPlaceholder from '~/assets/spr-schema-2-light-placeholder.png';
-import imageSprSchema2Light from '~/assets/spr-schema-2-light.png';
-import imageSprStoryboarderDarkLarge from '~/assets/spr-storyboarder-dark-large.png';
 import imageSprStoryboarderDarkPlaceholder from '~/assets/spr-storyboarder-dark-placeholder.png';
 import imageSprStoryboarderDark from '~/assets/spr-storyboarder-dark.png';
 import imageSprStoryboarderLightLarge from '~/assets/spr-storyboarder-light-large.png';
 import imageSprStoryboarderLightPlaceholder from '~/assets/spr-storyboarder-light-placeholder.png';
 import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
+import designSystem from '~/assets/spr-design-system-dark-large.gif';
+import cnnModel from '~/assets/cnnmodel.gif';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
-// import { Link } from '~/components/link';
-import { SegmentedControl, SegmentedControlOption } from '~/components/segmented-control';
 import { ThemeProvider, useTheme } from '~/components/theme-provider';
+import { List, ListItem } from '~/components/list';
 import {
   ProjectBackground,
   ProjectContainer,
@@ -132,15 +119,14 @@ export const SmartSparrow = () => {
         </ProjectSection>
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>Overview</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              In todays fast-paced world, cooking can be both an enjoyable hobby and a
+              necessity. However, sometimes finding the right recipe for a dish can be
+              challenging, especially when you dont know the name of the dish or its
+              ingredients. Cooking by Sight aims to solve this problem by allowing users
+              to simply take a picture of the food they want to cook and generate a recipe
+              based on that image.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -163,23 +149,28 @@ export const SmartSparrow = () => {
               alt={`A set of ${theme} themed components for the aero design system`}
               sizes="100vw"
             />
+            <ProjectTextRow></ProjectTextRow>
             <ProjectTextRow>
-              <SegmentedControl
-                currentIndex={themes.indexOf(theme)}
-                onChange={handleThemeChange}
-              >
-                <SegmentedControlOption>Dark theme</SegmentedControlOption>
-                <SegmentedControlOption>Light theme</SegmentedControlOption>
-              </SegmentedControl>
-            </ProjectTextRow>
-            <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
+              <ProjectSectionHeading>Features</ProjectSectionHeading>
               <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
+                <List>
+                  <ListItem>
+                    <strong>Image Recognition: </strong> Our deep learning model can
+                    accurately identify various types of food items in an image.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Recipe Generation: </strong> Once the food is identified, the
+                    system generates a recipe based on the recognized ingredients.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Natural Language Processing: </strong> The generated recipes
+                    are presented in a human-readable format, making them easy to follow.
+                  </ListItem>
+                  <ListItem>
+                    <strong>User-Friendly Interface: </strong> A simple and intuitive user
+                    interface makes it easy for users to interact with the system.
+                  </ListItem>
+                </List>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -191,7 +182,7 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDarkLarge} 2560w`
+                  ? `${imageSprDesignSystemDark} 1280w, ${designSystem} 2560w`
                   : `${imageSprDesignSystemLight} 1280w, ${imageSprDesignSystemLightLarge} 2560w`
               }
               width={1280}
@@ -205,12 +196,20 @@ export const SmartSparrow = () => {
               sizes="100vw"
             />
             <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
+              <ProjectSectionHeading>About Us</ProjectSectionHeading>
               <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
+                Welcome to Cooking by Sight, where innovation meets culinary expertise.
+                Our passionate team revolutionizes cooking experiences by transforming
+                food images into delicious recipes with AI. Our mission is to empower
+                everyone, from home cooks to professionals, to explore cooking with
+                confidence and creativity. Our cutting-edge platform analyzes food images,
+                extracts key ingredients and cooking methods, and delivers personalized
+                recipes tailored to your preferences and dietary needs. Committed to
+                exceptional user experiences, we continuously refine our algorithms,
+                expand our recipe database, and embrace community feedback. Utilizing
+                technologies like JavaScript, Python, Next.js, React.js, TensorFlow, and
+                more, we ensure Cooking by Sight remains your go-to for culinary
+                inspiration and guidance.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -232,12 +231,33 @@ export const SmartSparrow = () => {
             <ProjectSectionColumns width="full">
               <ProjectSectionContent width="full">
                 <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
+                  <ProjectSectionHeading>How It Works?</ProjectSectionHeading>
                   <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
+                    To use Cooking by Sight, follow these simple steps:
+                    <List>
+                      <ListItem>
+                        Start the backend server by following the instructions in the
+                        backend README.
+                      </ListItem>
+                      <ListItem>
+                        Start the frontend development server by following the
+                        instructions in the frontend README.
+                      </ListItem>
+                      <ListItem>
+                        Open your browser and navigate to the provided URL to access the
+                        application.
+                      </ListItem>
+                      <ListItem>Upload an image of the food you want to cook.</ListItem>
+                      <ListItem>
+                        Wait for the system to identify the food items in the image.
+                      </ListItem>
+                      <ListItem>
+                        View the generated recipe based on the identified ingredients.
+                      </ListItem>
+                      <ListItem>
+                        Follow the steps in the recipe to cook your dish!
+                      </ListItem>
+                    </List>
                   </ProjectSectionText>
                 </ProjectTextRow>
               </ProjectSectionContent>
@@ -257,13 +277,20 @@ export const SmartSparrow = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
+              <ProjectSectionHeading>
+                CNN Model of our Deep learning Algorithm
+              </ProjectSectionHeading>
               <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
+                At Cooking by Sight, we leverage a sophisticated Convolutional Neural
+                Network (CNN) model to power our AI platform, enabling precise image
+                recognition and analysis. CNNs, ideal for tasks like identifying
+                ingredients and cooking methods, process images through layers that detect
+                features such as edges, textures, and shapes. Trained on an extensive
+                dataset of food images, our CNN model accurately recognizes a wide variety
+                of ingredients and dishes. This detailed analysis feeds directly into our
+                platform, transforming visual inputs into personalized recipes. By
+                continuously refining our model, we ensure exceptional accuracy and
+                reliability, making your culinary experience seamless and enjoyable.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -271,7 +298,7 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprStoryboarderDark} 1280w, ${imageSprStoryboarderDarkLarge} 2560w`
+                  ? `${imageSprStoryboarderDark} 1280w, ${cnnModel} 2560w`
                   : `${imageSprStoryboarderLight} 1280w, ${imageSprStoryboarderLightLarge} 2560w`
               }
               width={1280}
@@ -286,68 +313,11 @@ export const SmartSparrow = () => {
             />
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionColumns>
-            <ProjectSectionContent>
-              <ProjectTextRow>
-                <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
-                </ProjectSectionHeading>
-                <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
-                </ProjectSectionText>
-              </ProjectTextRow>
-            </ProjectSectionContent>
-            <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? `${imageSprSchema2Dark} 260w, ${imageSprSchema2DarkLarge} 520w`
-                    : `${imageSprSchema2Light} 260w, ${imageSprSchema2LightLarge} 520w`
-                }
-                width={260}
-                height={660}
-                placeholder={
-                  isDark
-                    ? imageSprSchema2DarkPlaceholder
-                    : imageSprSchema2LightPlaceholder
-                }
-                alt="Configuration options for a component."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? `${imageSprSchema1Dark} 260w, ${imageSprSchema1DarkLarge} 520w`
-                    : `${imageSprSchema1Light} 260w, ${imageSprSchema1LightLarge} 520w`
-                }
-                width={260}
-                height={660}
-                placeholder={
-                  isDark
-                    ? imageSprSchema1DarkPlaceholder
-                    : imageSprSchema1LightPlaceholder
-                }
-                alt="Configuration options for text."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-            </div>
-          </ProjectSectionColumns>
-        </ProjectSection>
         <ThemeProvider theme="dark" data-invert>
           <Suspense>
             <Earth
               className={styles.earth}
-              hideMeshes={useMemo(
-                () => ['Atmosphere', 'EarthPartial', 'Chunk', 'EarthFull'],
-                []
-              )}
+              hideMeshes={useMemo(() => ['Atmosphere', 'EarthPartial', 'EarthFull'], [])}
               position={useMemo(() => [0, 0, 0], [])}
               labels={useMemo(
                 () => [
@@ -413,13 +383,21 @@ export const SmartSparrow = () => {
                 <ProjectSection>
                   <ProjectSectionContent>
                     <ProjectTextRow center>
-                      <ProjectSectionHeading>
-                        Next-generation learning experiences
-                      </ProjectSectionHeading>
+                      <ProjectSectionHeading>Our Dataset and Users</ProjectSectionHeading>
                       <ProjectSectionText>
-                        The flexibility of the product allowed for developers to create
-                        engaging interactive experiences as highly configurable plugins
-                        that could then be used and manipulated by learning designers.
+                        Cooking by Sight relies on a robust and diverse dataset consisting
+                        of thousands of high-resolution food images paired with detailed
+                        recipes, covering a wide range of cuisines and meal types. This
+                        comprehensive dataset ensures accurate food identification and
+                        recipe generation. Our target users include home cooks looking for
+                        inspiration and convenience, food enthusiasts eager to explore new
+                        dishes, individuals with dietary restrictions seeking personalized
+                        recipes, busy professionals needing quick meal solutions, culinary
+                        students and professionals using the tool for creative
+                        exploration, and restaurant owners or caterers seeking to innovate
+                        their menus. By catering to these diverse groups, Cooking by Sight
+                        aims to make cooking more accessible, enjoyable, and innovative
+                        for everyone.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -439,12 +417,16 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="end" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Bringing 3D into learning
+                        Flexibility
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        One really cool example is the 3D screen plugin. Learning
-                        designers can load any model into it and then configure camera
-                        positions to animate to for each section.
+                        Cooking by Sight offers unmatched flexibility, allowing users to
+                        explore a wide range of dishes effortlessly. Whether youre a
+                        novice cook or a culinary enthusiast, our system adapts to your
+                        needs, providing customized recipes tailored to diverse tastes and
+                        dietary preferences. With support for various cuisines and meal
+                        types, Cooking by Sight ensures a seamless cooking experience for
+                        all users.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -467,12 +449,14 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="start" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Interactivity
+                        Generate Recipe
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        Learners can then be directed to specific parts of the model and
-                        shown labels. They’re also able to click and drag to orbit around
-                        and freely explore at any time.
+                        In Cooking by Sight, our system analyzes uploaded food images and
+                        crafts detailed, easy-to-follow recipes based on the identified
+                        ingredients. From comfort foods to culinary delights, enjoy
+                        personalized recipes tailored to your preferences and dietary
+                        needs—all at your fingertips.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -492,27 +476,6 @@ export const SmartSparrow = () => {
                 ]}
               />
               <EarthSection
-                animations={['0:loop']}
-                camera={[0.37, 1.02, 1.84]}
-                meshes={['EarthPartial', 'Chunk']}
-                labels={['Mantle', 'Outer core', 'Inner core']}
-              >
-                <ProjectSection>
-                  <ProjectSectionContent width="xl">
-                    <ProjectTextRow justify="end" width="s">
-                      <ProjectSectionHeading level={4} as="h3">
-                        Animation
-                      </ProjectSectionHeading>
-                      <ProjectSectionText>
-                        Learning designers can pick an animation included in the model to
-                        play or loop for any section without having to use any complex
-                        animation tools.
-                      </ProjectSectionText>
-                    </ProjectTextRow>
-                  </ProjectSectionContent>
-                </ProjectSection>
-              </EarthSection>
-              <EarthSection
                 scrimReverse
                 animations={['0:loop']}
                 camera={[0.37, 1.02, 1.84]}
@@ -522,8 +485,7 @@ export const SmartSparrow = () => {
           </Suspense>
         </ThemeProvider>
         <ProjectSection>
-          <ProjectSectionContent>
-          </ProjectSectionContent>
+          <ProjectSectionContent></ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
       <Footer />
