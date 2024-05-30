@@ -23,6 +23,7 @@ import sliceSlidesPlaceholder from '~/assets/slice-slides-placeholder.jpg';
 import sliceSlides from '~/assets/slice-slides.jpg';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
+import { List, ListItem } from '~/components/list';
 import {
   ProjectBackground,
   ProjectContainer,
@@ -40,10 +41,10 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './slice.module.css';
 
-const title = 'Biomedical image collaboration';
+const title = 'Automatic Birthday mail';
 const description =
-  'This project involved designing a better way for biomedical educators and learners to annotate digital slides together.';
-const roles = ['User Research', 'UX Design', 'Interface Design'];
+  'Automating routine tasks like sending birthday wishes can indeed streamline our lives, ensuring that we maintain meaningful connections without the risk of oversight or forgetfulness. With a Python script tailored to this purpose, you can effortlessly extend warm greetings to your friends at the stroke of midnight, regardless of your schedule. This sophisticated solution not only showcases your thoughtfulness but also underscores your commitment to nurturing relationships in the digital age. By harnessing the power of automation, you can infuse a touch of elegance into your interactions, leaving a lasting impression on your friends while freeing up valuable time for other pursuits. Embrace the efficiency and convenience of modern technology, and let your Python script become the silent orchestrator of heartfelt birthday wishes, ensuring that no celebration goes unnoticed or unacknowledged.';
+const roles = ['Pandas', 'datetime', 'smtplib', 'time', 'requests', 'win10toast'];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -55,7 +56,7 @@ export const Slice = () => {
       <ProjectContainer className={styles.slice}>
         <ProjectBackground
           src={sliceBackground}
-          srcSet={`${sliceBackground} 1280w, ${sliceBackgroundLarge} 2560w`}
+          srcSet={`${sliceBackgroundLarge} 2560w`}
           width={1280}
           height={800}
           placeholder={sliceBackgroundPlaceholder}
@@ -64,7 +65,7 @@ export const Slice = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.best.edu.au/s/q2yjjvl7?data=8%404!9%4020303!10%40-15087&version=1"
+          url="https://github.com/md-hameem/Auto-Birthday-Mail"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -82,22 +83,33 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>Features</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+                <List>
+                  <ListItem>
+                    <strong>Automated Email Sending:</strong> Sends personalized birthday
+                    wishes via email.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Automated SMS Sending: </strong> Sends personalized birthday
+                    wishes via SMS.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Desktop Notifications: </strong> Displays a desktop
+                    notification when an email or SMS is sent.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Excel Integration: </strong> Reads from an Excel file
+                    containing the birthday details and updates it to track the greetings
+                    sent.
+                  </ListItem>
+                </List>
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarLayers} 350w, ${sliceSidebarLayersLarge} 700w`}
+                srcSet={`${sliceSidebarLayersLarge} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarLayersPlaceholder}
@@ -106,7 +118,7 @@ export const Slice = () => {
               />
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarAnnotations} 350w, ${sliceSidebarAnnotationsLarge} 700w`}
+                srcSet={`${sliceSidebarAnnotationsLarge} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarAnnotationsPlaceholder}
@@ -119,18 +131,32 @@ export const Slice = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
+              <ProjectSectionHeading>Prepare the Excel Sheet</ProjectSectionHeading>
               <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
+                Ensure you have an Excel sheet (excelsheet.xlsx) with the following
+                columns:
+                <List>
+                  <ListItem>
+                    <strong>`NAME:`</strong> The name of the person.
+                  </ListItem>
+                  <ListItem>
+                    <strong>`Birthday:`</strong> The birthday date in YYYY-MM-DD format.
+                  </ListItem>
+                  <ListItem>
+                    <strong>`Email:`</strong> The email address of the person.
+                  </ListItem>
+                  <ListItem>
+                    <strong>`Contact:`</strong> The phone number of the person.
+                  </ListItem>
+                  <ListItem>
+                    <strong>`Year:`</strong> The years when the greetings were sent,
+                    separated by commas.
+                  </ListItem>
+                </List>
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
-              srcSet={`${sliceSlides} 800w, ${sliceSlidesLarge} 1920w`}
+              srcSet={`${sliceSlidesLarge} 1920w`}
               width={800}
               height={500}
               placeholder={sliceSlidesPlaceholder}
@@ -141,37 +167,25 @@ export const Slice = () => {
         </ProjectSection>
         <ProjectSection padding="top">
           <ProjectSectionContent className={styles.grid}>
-            <div className={styles.gridImage}>
-              <div className={styles.gridBackground}>
-                <Image
-                  srcSet={`${sliceBackgroundBar} 440w, ${sliceBackgroundBarLarge} 880w`}
-                  width={440}
-                  height={790}
-                  placeholder={sliceBackgroundBarPlaceholder}
-                  alt=""
-                  role="presentation"
-                  sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
-                />
-              </div>
-              <div className={styles.gridForeground}>
-                <Image
-                  srcSet={`${sliceAnnotation} 440w, ${sliceAnnotationLarge} 880w`}
-                  width={440}
-                  height={340}
-                  placeholder={sliceAnnotationPlaceholder}
-                  alt="An annotation preview popover with statistics for shape perimeter and area."
-                  sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                />
-              </div>
-            </div>
             <div className={styles.gridText}>
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
+              <ProjectSectionHeading>Code Explanation</ProjectSectionHeading>
               <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
+                <List>
+                  <ListItem>
+                    <strong>Sending Email: </strong> The send_email function connects to
+                    the Gmail SMTP server, logs in using your credentials, and sends an
+                    email.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Sending SMS: </strong> The send_sms function sends an SMS
+                    using the Fast2SMS API.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Main Script: </strong> The script reads the Excel file, checks
+                    for birthdays matching the current date, sends the wishes, and updates
+                    the Excel file with the current year.
+                  </ListItem>
+                </List>
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -179,22 +193,34 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
+              <ProjectSectionHeading>Project Configuration</ProjectSectionHeading>
               <ProjectSectionText>
-                Real-time collaborative annotation facilitated better collaboration
-                between learners, and was much easier to run group exercises with the new
-                shared layers feature. Learners gave feedback that is was enjoyable to
-                work together and see what others were doing, and liked how interactive
-                and easy to use the application was.
+                <h5>Update Gmail Credentials</h5>
+                <p>
+                  Replace <code>your_email_here</code> and <code>your_password_here</code>{' '}
+                  with your Gmail ID and password in the script.
+                </p>
+
+                <h5>Update Fast2SMS API Key</h5>
+                <p>
+                  Replace <code>API_KEY_HERE</code> with your actual Fast2SMS API key in
+                  the script.
+                </p>
+                <br />
+                <ProjectSectionHeading>Usage</ProjectSectionHeading>
+                <h5>Run the Script</h5>
+                <p>Execute the following command in your terminal:</p>
+                <pre>
+                  <code>python main.py</code>
+                </pre>
+
+                <h5>Ensure the Script Runs Daily</h5>
+                <p>
+                  Use a task scheduler (e.g., Windows Task Scheduler) to run the script
+                  daily at midnight.
+                </p>
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={sliceIrl}
-              width={940}
-              height={500}
-              placeholder={sliceIrlPlaceholder}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
-            />
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
