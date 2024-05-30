@@ -106,13 +106,13 @@ export const Home = () => {
         title="Genarate Recipe from food Images"
         description="This project combines deep learning, computer vision, and natural language processing techniques to generate recipes from food images"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/cooking-by-sight"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Cooking By Sight',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              srcSet: `${sprTextureLarge} 2560w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -127,17 +127,17 @@ export const Home = () => {
         title="AdBlock Detector"
         description="Block the adblocker detector to detect if there is any."
         buttonText="View website"
-        buttonLink="/projects/volkihar-knight"
+        buttonLink="/projects/adblock-detector"
         model={{
           type: 'phone',
-          alt: 'App login screen',
+          alt: 'Aadblock SS',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
+              srcSet: `${gamestackTextureLarge} 750w`,
               placeholder: gamestackTexturePlaceholder,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
+              srcSet: `${gamestackTexture2Large} 750w`,
               placeholder: gamestackTexture2Placeholder,
             },
           ],
@@ -151,13 +151,13 @@ export const Home = () => {
         title="Automatic Birthday mail"
         description="Automating routine tasks like sending birthday wishes can indeed streamline our lives, ensuring that we maintain meaningful connections without the risk of oversight or forgetfulness.Increasing the amount of collaboration in Slice, an app for biomedical imaging"
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/auto-birthday-message"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Bday App',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              srcSet: `${sliceTextureLarge} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],
