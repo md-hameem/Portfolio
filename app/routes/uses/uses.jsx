@@ -306,6 +306,82 @@ export const Uses = () => {
 
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
+            <ProjectTextRow width="m">
+              <ProjectSectionHeading>Publicatios</ProjectSectionHeading>
+              <ProjectSectionText as="div">
+                <p>
+                  <strong>
+                    <em>
+                      The Role of Artificial Intelligence in Revolutionizing Construction
+                      Project Management: Enhancing Efficiency and Sustainability
+                    </em>
+                  </strong>
+                </p>
+                <List>
+                  <ListItem>
+                    This marks a significant milestone in my journey as a researcher. In
+                    the paper, we discuss how AI is revolutionizing construction by
+                    improving efficiency, safety, and sustainability through predictive
+                    analytics, machine learning, and automation. Despite challenges, AI is
+                    helping to optimize resources, reduce waste, and promote greener
+                    practices. Learning.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Article Refference:</strong> North American Academic Research,
+                    8(1), 56-76. doi:
+                    <a href="https://doi.org/10.5281/zenodo.14840458"> Link to DOI</a>
+                  </ListItem>
+                  <ListItem>
+                    <strong>Links: </strong>
+                    <a href="https://twasp.info/journal/4F5217xs/the-role-of-artificial-intelligence-in-revolutionizing-construction-project-management-enhancing-efficiency-and-sustainability">
+                      NAAR
+                    </a>
+                    ,{' '}
+                    <a href="https://www.researchgate.net/publication/389706991_The_Role_of_Artificial_Intelligence_in_Revolutionizing_Construction_Project_Management_Enhancing_Efficiency_and_Sustainability">
+                      ResearchGate
+                    </a>
+                  </ListItem>
+                </List>
+                <p>
+                  <strong>
+                    <em>
+                      Software Requirement Elicitation Technique: Gamification using
+                      Decision Tree Method
+                    </em>
+                  </strong>
+                </p>
+                <List>
+                  <ListItem>
+                    This study presents an innovative approach that combines gamification
+                    techniques with the Decision Tree Method to improve stakeholder
+                    engagement and the overall requirements elicitation process.
+                    Gamification fosters collaboration and creativity, while the Decision
+                    Tree Method systematically helps prioritize and resolve conflicts
+                    around requirements.
+                  </ListItem>
+                  <ListItem>
+                    <strong>Article Refference:</strong> North American Academic Research,
+                    8(2), 77-92. doi:
+                    <a href="https://doi.org/10.5281/zenodo.14884787"> Link to DOI</a>
+                  </ListItem>
+                  <ListItem>
+                    <strong>Links: </strong>
+                    <a href="https://twasp.info/journal/lx39205A/software-requirement-elicitation-technique-gamification-using-decision-tree-methody">
+                      NAAR
+                    </a>
+                    ,{' '}
+                    <a href="https://www.researchgate.net/publication/389707025_Software_Requirement_Elicitation_Technique_Gamification_using_Decision_Tree_Method?_sg%5B0%5D=_wtn8jfXzGFc9AufyU2P8UlY4VLzREiGVAWiWwOO0w5QMj858IV49bwCDq35MkFbS2JjtaqrL2afCuedyDlIkRQwhK5Dc7rqzi6fd1PN.LchF5IiVWOX-yCtaRfSu03LBU96bXMbf1ksAjoh_WE-rVOS_xTjse9S3cM0t1zkpMzSlTeF6OztDOFBFUlDZlg&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19">
+                      ResearchGate
+                    </a>
+                  </ListItem>
+                </List>
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
               <ProjectSectionHeading>Hardware</ProjectSectionHeading>
               <Table>
